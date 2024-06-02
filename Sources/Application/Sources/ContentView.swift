@@ -1,3 +1,7 @@
+//
+// Created by Marius Felkner on 02.06.24.
+//
+
 import SwiftUI
 
 public struct ContentView: View {
@@ -8,7 +12,6 @@ public struct ContentView: View {
             .padding()
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
