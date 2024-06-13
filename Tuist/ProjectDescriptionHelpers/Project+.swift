@@ -20,7 +20,8 @@ public extension Project {
                 ".swiftformat",
                 ".mise.toml",
                 "Makefile",
-                "Tuist/FileHeaderTemplate"
+                "Tuist/FileHeaderTemplate",
+                ".git/hooks/pre-commit.sh"
             ]
         )
     }
