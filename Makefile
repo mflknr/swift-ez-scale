@@ -12,6 +12,9 @@ format:
 
 lint-swiftlint:
 	$(MISE) x swiftlint@latest -- swiftlint Sources/ --config .swiftlint.yml
-	
+
+lint-swiftformat:
+	$(MISE) x swiftformat@latest -- swiftformat Sources/ --lint --lenient
+
 lint-strict-swiftformat:
 	$(MISE) x swiftformat@latest -- swiftformat Sources/ --lint --strict
