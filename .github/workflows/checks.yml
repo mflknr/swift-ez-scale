@@ -65,7 +65,7 @@ jobs:
           is-executable: true
           working-directory: ".configurations/.xcconfig"
     - run: make prepare
-    run: make test
+    - run: make test
 
   lint-swiftlint:
     runs-on: macos-latest
