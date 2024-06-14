@@ -1,6 +1,9 @@
 CONFIG = debug
 MISE = ~/.local/bin/mise
 
+prepare:
+	tuist install && tuist generate -n
+
 build:
 	tuist build Debug --clean --no-binary-cache
 
