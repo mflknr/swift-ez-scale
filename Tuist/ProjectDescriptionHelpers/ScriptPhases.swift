@@ -7,7 +7,6 @@ extension Project {
     static func makeSwiftLintScriptPhase() -> TargetScript {
         .post(
             script: """
-               printenv
                if [[ ${USER} != "runner" ]] ; then
                    make local-lint-swiftlint
                else
@@ -24,7 +23,6 @@ extension Project {
     static func makeSwiftFormatScriptPhase() -> TargetScript {
         .post(
             script: """
-               printenv
                if [[ ${USER} != "runner" ]] ; then
                    make local-lint-swiftformat
                else
