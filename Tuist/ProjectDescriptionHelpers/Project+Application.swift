@@ -10,10 +10,20 @@ extension Project {
             productName: appName,
             bundleId: "\(Constants.bundleIdPrefix)Application",
             deploymentTargets: Constants.deploymentTargets,
-            infoPlist: .default,
-            sources: ["\(Constants.sourcesDir)/Application/Sources/**"],
+            infoPlist: .extendingDefault(
+                with: [
+                    "UILaunchScreen": .dictionary(
+                        [
+                            "UILaunchScreen": .string("")
+                        ]
+                    )
+                ]
+            ),
+            sources: [
+                "\(Constants.sourcesDir)Application/Sources/**"
+            ],
             resources: [
-                "\(Constants.sourcesDir)/Application/Resources/**"
+                "\(Constants.sourcesDir)Application/Resources/**"
             ],
             scripts: [
                 makeSwiftLintScriptPhase(),
