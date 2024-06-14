@@ -7,8 +7,7 @@ extension Project {
     static func makeSwiftLintScriptPhase() -> TargetScript {
         .post(
             script: """
-               printenv
-               if [[ -z ${CI} ]] ; then
+               if [[ ${USER} == "runner" ]] ; then
                    make local-lint-swiftlint
                else
                    echo "Skipping SwiftLint build phase on pipeline. Local build phase only."
@@ -24,7 +23,7 @@ extension Project {
     static func makeSwiftFormatScriptPhase() -> TargetScript {
         .post(
             script: """
-               if [[ -z ${CI} ]] ; then
+               if [[ ${USER} == "runner" ]] ; then
                    make local-lint-swiftformat
                else
                    echo "Skipping SwiftFormat build phase on pipeline. Local build phase only."

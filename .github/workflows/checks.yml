@@ -6,9 +6,6 @@ on:
   pull_request:
     branches: [ "main", "develop" ]
 
-env:
-  CI: true
-
 jobs:
   build:
     runs-on: macos-latest
@@ -113,6 +110,5 @@ jobs:
         base64-encoded-secret: ${{ secrets.SHARED_XCCONFIG }}
         filename: "Shared.xcconfig"
         working-directory: ".configurations/.xcconfig"
-    - run: export CI="true"
     - run: make prepare
     - run: make ci-lint-periphery
