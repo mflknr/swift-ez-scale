@@ -113,5 +113,6 @@ jobs:
         base64-encoded-secret: ${{ secrets.SHARED_XCCONFIG }}
         filename: "Shared.xcconfig"
         working-directory: ".configurations/.xcconfig"
+    - run: export CI="true"
     - run: make prepare
     - run: make ci-lint-periphery
