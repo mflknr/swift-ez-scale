@@ -39,7 +39,7 @@ extension Project {
             bundleId: "\(Constants.bundleIdPrefix)ApplicationTests",
             deploymentTargets: Constants.deploymentTargets,
             infoPlist: .default,
-            sources: ["\(Constants.sourcesDir)/Application/Tests/**"],
+            sources: ["\(Constants.sourcesDir)Application/Tests/**"],
             dependencies: []
         )
 
