@@ -19,6 +19,21 @@ jobs:
           version: 2024.6.3
           install: true
           cache: true
+    - uses: mobiledevops/secret-to-file-action@v1
+      with:
+          base64-encoded-secret: ${{ secrets.DEBUG_XCCONFIG }}
+          filename: "Debug.xcconfig"
+          working-directory: "./configurations/.xcconfig"
+    - uses: mobiledevops/secret-to-file-action@v1
+      with:
+          base64-encoded-secret: ${{ secrets.RELEASE_XCCONFIG }}
+          filename: "Release.xcconfig"
+          working-directory: "./configurations/.xcconfig"
+    - uses: mobiledevops/secret-to-file-action@v1
+      with:
+          base64-encoded-secret: ${{ secrets.SHARED_XCCONFIG }}
+          filename: "Shared.xcconfig"
+          working-directory: "./configurations/.xcconfig"
     - run: make prepare
     - run: make build
 
@@ -31,6 +46,24 @@ jobs:
           version: 2024.6.3
           install: true
           cache: true
+    - uses: mobiledevops/secret-to-file-action@v1
+      with:
+          base64-encoded-secret: ${{ secrets.DEBUG_XCCONFIG }}
+          filename: "Debug.xcconfig"
+          is-executable: true
+          working-directory: "./configurations/.xcconfig"
+    - uses: mobiledevops/secret-to-file-action@v1
+      with:
+          base64-encoded-secret: ${{ secrets.RELEASE_XCCONFIG }}
+          filename: "Release.xcconfig"
+          is-executable: true
+          working-directory: "./configurations/.xcconfig"
+    - uses: mobiledevops/secret-to-file-action@v1
+      with:
+          base64-encoded-secret: ${{ secrets.SHARED_XCCONFIG }}
+          filename: "Shared.xcconfig"
+          is-executable: true
+          working-directory: "./configurations/.xcconfig"
     - run: make prepare
     # - run: make test # disbaled until signing is correctly setted up
 
