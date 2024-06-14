@@ -1,0 +1,54 @@
+name: checks
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: jdx/mise-action@v2
+        with:
+          version: latest
+          install: true
+          cache: true
+    - run: make prepare
+    - run: make build
+
+  test:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: jdx/mise-action@v2
+        with:
+          version: latest
+          install: true
+          cache: true
+    - run: make prepare
+    # - run: make test # disbaled until signing is correctly setted up
+
+  lint-swiftlint:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: jdx/mise-action@v2
+        with:
+          version: latest
+          install: true
+          cache: true
+    - run: make lint-swiftlint
+
+  lint-swiftformat:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: jdx/mise-action@v2
+        with:
+          version: latest
+          install: true
+          cache: true
+    - run: make lint-strict-swiftformat
