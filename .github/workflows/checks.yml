@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ "main", "develop" ]
 
+env:
+  CI: true
+
 jobs:
   build:
     runs-on: macos-latest
@@ -40,7 +43,7 @@ jobs:
           version: 2024.6.3
           install: true
           cache: true
-    - run: make lint-swiftlint
+    - run: make ci-lint-swiftlint
 
   lint-swiftformat:
     runs-on: macos-latest
@@ -51,4 +54,4 @@ jobs:
           version: 2024.6.3
           install: true
           cache: true
-    - run: make lint-strict-swiftformat
+    - run: make ci-lint-swiftformat

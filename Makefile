@@ -1,5 +1,4 @@
 CONFIG = debug
-MISE = ~/.local/bin/mise
 
 prepare:
 	tuist install && tuist generate -n
@@ -7,17 +6,20 @@ prepare:
 build:
 	tuist build Debug --clean --no-binary-cache
 
+local-lint-swiftlint:
+	~/.local/bin/mise x swiftlint@latest -- swiftlint Sources/ --config .swiftlint.yml
+
+local-lint-swiftformat:
+	~/.local/bin/mise x swiftformat@latest -- swiftformat Sources/ --lint --lenient
+
 test:
 	tuist test
 
 format:
-	$(MISE) x swiftformat@latest -- swiftformat Sources/
+	mise x swiftformat@latest -- swiftformat Sources/
 
-lint-swiftlint:
-	$(MISE) x swiftlint@latest -- swiftlint Sources/ --config .swiftlint.yml
+ci-lint-swiftlint:
+	mise x swiftlint@latest -- swiftlint lint Sources/ --config .swiftlint.yml --strict
 
-lint-swiftformat:
-	$(MISE) x swiftformat@latest -- swiftformat Sources/ --lint --lenient
-
-lint-strict-swiftformat:
-	$(MISE) x swiftformat@latest -- swiftformat Sources/ --lint --strict
+ci-lint-swiftformat:
+	mise x swiftformat@latest -- swiftformat Sources/ --lint --strict

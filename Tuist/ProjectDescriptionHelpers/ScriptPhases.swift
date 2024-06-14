@@ -8,7 +8,7 @@ extension Project {
         .post(
             script: """
                if [[ -z ${CI} ]] ; then
-                   make lint-swiftlint
+                   make local-lint-swiftlint
                else
                    echo "Skipping SwiftLint build phase on pipeline. Local build phase only."
                    exit 0
@@ -24,7 +24,7 @@ extension Project {
         .post(
             script: """
                if [[ -z ${CI} ]] ; then
-                   make lint-swiftformat
+                   make local-lint-swiftformat
                else
                    echo "Skipping SwiftFormat build phase on pipeline. Local build phase only."
                    exit 0
