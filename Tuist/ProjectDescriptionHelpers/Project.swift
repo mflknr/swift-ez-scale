@@ -12,6 +12,7 @@ public extension Project {
                     tabWidth: 4
                 )
             ),
+            settings: makeSettings(),
             targets: makeApplicationTargets(),
             schemes: Scheme.makeApplicationSchemes(),
             fileHeaderTemplate: .file("Tuist/FileHeaderTemplate"),
@@ -21,7 +22,9 @@ public extension Project {
                 ".mise.toml",
                 "Makefile",
                 "Tuist/FileHeaderTemplate",
-                ".git/hooks/pre-commit.sh"
+                ".git/hooks/pre-commit.sh",
+                ".gitignore",
+                "\(Constants.configurationsDir)Shared.xcconfig"
             ]
         )
     }
