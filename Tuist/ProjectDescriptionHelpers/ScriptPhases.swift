@@ -8,6 +8,7 @@ extension Project {
         .post(
             script: """
                if [[ -z ${CI} ]] ; then
+				   printenv
                    make local-lint-swiftlint
                else
                    echo "Skipping SwiftLint build phase on pipeline. Local build phase only."
