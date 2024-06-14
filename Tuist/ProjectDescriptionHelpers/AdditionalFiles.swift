@@ -17,7 +17,8 @@ extension Project {
             "Tuist/FileHeaderTemplate",
             ".git/hooks/pre-commit.sh",
             ".gitignore",
-            "\(Constants.configurationsDir)Shared.xcconfig"
+            "\(Constants.configurationsDir)Shared.xcconfig",
+            ".github/workflows/*"
         ]
     }
 }

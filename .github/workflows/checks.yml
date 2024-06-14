@@ -65,7 +65,7 @@ jobs:
           is-executable: true
           working-directory: ".configurations/.xcconfig"
     - run: make prepare
-    # - run: make test # disbaled until signing is correctly setted up
+    run: make test
 
   lint-swiftlint:
     runs-on: macos-latest

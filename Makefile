@@ -1,5 +1,10 @@
 CONFIG = debug
 
+encode-configs:
+	base64 -i .configurations/.xcconfig/Debug.xcconfig -o .configurations/.xcconfig/Debug.xcconfig.base64; \
+	base64 -i .configurations/.xcconfig/Shared.xcconfig -o .configurations/.xcconfig/Shared.xcconfig.base64; \
+	base64 -i .configurations/.xcconfig/Release.xcconfig -o .configurations/.xcconfig/Release.xcconfig.base64
+
 prepare:
 	tuist install && tuist generate -n
 
@@ -13,7 +18,7 @@ local-lint-swiftformat:
 	~/.local/bin/mise x swiftformat@latest -- swiftformat Sources/ --lint --lenient
 
 test:
-	tuist test
+	tuist test --configuration "Debug" --device "iPhone 15 Pro" --os "17.2.0" "Debug"
 
 format:
 	mise x swiftformat@latest -- swiftformat Sources/
