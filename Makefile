@@ -28,3 +28,6 @@ ci-lint-swiftlint:
 
 ci-lint-swiftformat:
 	mise x swiftformat@latest -- swiftformat Sources/ --lint --strict
+
+ci-lint-periphery:
+	mise x periphery@latest -- periphery scan

@@ -2,3 +2,4 @@
 tuist = "4.17.0"
 swiftlint = "0.55.1"
 swiftformat = "0.53.10"
+periphery = "2.20.0"

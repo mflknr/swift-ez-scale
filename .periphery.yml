@@ -1,0 +1,9 @@
+schemes:
+- Debug
+targets:
+- EasyScale
+- EasyScaleTests
+workspace: EasyScale.xcworkspace
+index_exclude:
+- Derived/**/*.swift
+strict: true
