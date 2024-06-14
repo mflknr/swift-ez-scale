@@ -8,7 +8,7 @@ extension Project {
         .post(
             script: """
                printenv
-               if [[ ${USER} == "runner" ]] ; then
+               if [[ ${USER} != "runner" ]] ; then
                    make local-lint-swiftlint
                else
                    echo "Skipping SwiftLint build phase on pipeline. Local build phase only."
@@ -25,7 +25,7 @@ extension Project {
         .post(
             script: """
                printenv
-               if [[ ${USER} == "runner" ]] ; then
+               if [[ ${USER} != "runner" ]] ; then
                    make local-lint-swiftformat
                else
                    echo "Skipping SwiftFormat build phase on pipeline. Local build phase only."
