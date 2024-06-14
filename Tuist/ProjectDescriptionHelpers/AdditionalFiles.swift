@@ -12,6 +12,7 @@ extension Project {
         [
             ".swiftlint.yml",
             ".swiftformat",
+            ".periphery.yml",
             ".mise.toml",
             "Makefile",
             "Tuist/FileHeaderTemplate",

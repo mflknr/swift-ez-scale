@@ -5,10 +5,10 @@
 import SwiftUI
 
 @main
-struct SwiftEzScaleApp: App {
+struct Application: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainScreen()
         }
     }
 }
