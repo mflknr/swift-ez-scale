@@ -70,4 +70,4 @@ Derived/
 Tuist/.build
 
 ### Configurations
-
+.configurations/*
