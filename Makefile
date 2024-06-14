@@ -6,7 +6,7 @@ encode-configs:
 	base64 -i .configurations/.xcconfig/Release.xcconfig -o .configurations/.xcconfig/Release.xcconfig.base64
 
 prepare:
-	tuist install && tuist generate -n
+	tuist install --no-update && tuist generate --no-open --no-binary-cache
 
 build:
 	tuist build Debug --clean --no-binary-cache
