@@ -19,7 +19,8 @@ extension Project {
             ".git/hooks/pre-commit.sh",
             ".gitignore",
             "\(Constants.configurationsDir)Shared.xcconfig",
-            ".github/workflows/*"
+            ".github/workflows/*",
+            ".github/dependabot.yml"
         ]
     }
 }

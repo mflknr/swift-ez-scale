@@ -19,7 +19,7 @@ updates:
     directory: "Tuist/" # Location of package manifests
     schedule:
       interval: "daily"
-      time: "17:20"
+      time: "05:30"
       timezone: "Europe/Berlin"
     target-branch: "main"
   
