@@ -10,10 +10,16 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+      time: "05:30"
+      timezone: "Europe/Berlin"
+    target-branch: "main"
 
   # swift package manager
   - package-ecosystem: "swift" # See documentation for possible values
     directory: "Tuist/" # Location of package manifests
     schedule:
       interval: "daily"
+      time: "17:20"
+      timezone: "Europe/Berlin"
+    target-branch: "main"
   
