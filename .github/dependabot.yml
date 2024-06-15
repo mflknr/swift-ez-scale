@@ -16,7 +16,7 @@ updates:
 
   # swift package manager
   - package-ecosystem: "swift" # See documentation for possible values
-    directory: "Tuist/" # Location of package manifests
+    directory: "/Tuist/" # Location of package manifests
     schedule:
       interval: "daily"
       time: "05:30"
