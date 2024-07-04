@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/krzysztofzablocki/Inject.git",
       "state" : {
-        "revision" : "838e614220000a563bbaeba2974236f2c2c51e13",
-        "version" : "1.5.0"
+        "revision" : "5ddde54c87bfda228a0073132434e9e5e81952af",
+        "version" : "1.5.1"
       }
     }
   ],
