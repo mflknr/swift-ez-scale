@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jessesquires/Foil.git",
       "state" : {
-        "revision" : "f5d66330cc7e3e8911ae3e2dfef942652f3fe3c2",
-        "version" : "5.0.0"
+        "revision" : "d91fd04c063fcfa0d1f062e447d9922589c12028",
+        "version" : "5.1.0"
       }
     },
     {
