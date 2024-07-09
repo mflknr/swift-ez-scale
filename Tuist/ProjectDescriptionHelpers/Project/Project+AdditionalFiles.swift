@@ -1,10 +1,3 @@
-//
-//  AdditionalFiles.swift
-//  ProjectDescriptionHelpers
-//
-//  Created by Marius Felkner on 14.06.24.
-//
-
 import ProjectDescription
 
 extension Project {
@@ -20,7 +13,9 @@ extension Project {
             ".gitignore",
             "\(Constants.configurationsDir)Shared.xcconfig",
             ".github/workflows/*",
-            ".github/dependabot.yml"
+            ".github/dependabot.yml",
+			"README.md",
+			"LICENSE"
         ]
     }
 }

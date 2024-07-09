@@ -15,10 +15,11 @@ public enum Constants {
     public static let resourcesDir = "Resources/"
     public static let testsDirPrefix = "Tests/"
     public static let uiTestsDir = "UITests/"
-    public static let featuresDir = "Features/"
+    public static let featuresDir = "\(sourcesDir)Features/"
     public static let configurationsDir = ".configurations/.xcconfig/"
 
     // deployment target
+	public static let destinations: Destinations = .iOS
     public static let iOSMinDeploymentTarget = "17.0"
     public static let watchOSMinDeploymentTarget = "10.0"
     public static let deploymentTargets: DeploymentTargets = .multiplatform(

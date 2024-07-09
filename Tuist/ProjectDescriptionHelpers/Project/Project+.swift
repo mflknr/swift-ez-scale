@@ -13,10 +13,17 @@ public extension Project {
                 )
             ),
             settings: makeSettings(),
-            targets: makeApplicationTargets(),
+            targets: makeProjectTargets(),
             schemes: Scheme.makeApplicationSchemes(),
             fileHeaderTemplate: .file("Tuist/FileHeaderTemplate"),
             additionalFiles: makeAdditionalFiles()
         )
     }
+
+	private static func makeProjectTargets() -> [Target] {
+		[
+			makeApplicationTargets(),
+			makeFeatureTargets()
+		].flatMap { $0 }
+	}
 }

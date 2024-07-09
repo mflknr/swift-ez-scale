@@ -3,10 +3,11 @@
 //
 
 import SwiftUI
-import DiagramPresentation
 
 struct MainScreen: View {
 	var body: some View {
-		WeightsDiagramView()
+		Text("Hello, World!")
+			.font(.title)
+			.padding()
 	}
 }
